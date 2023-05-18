@@ -1,0 +1,35 @@
+<a href='/dashboard' class='go-back'> &larr; Retun To Dashboard</a>
+<article class='new-page'>
+  <div class='edit-form-page'>
+    <div class='form-heading'>
+      <h2>
+        Edit Blog
+      </h2>
+    </div>
+    <section class='form-section'>
+      <form class='edit-blog-form'>
+        <div class='blog-title-section'>
+          <label for='blog-title'>Title</label>
+          <input
+            type='text'
+            name='blog-title'
+            id='blog-title'
+            value='{{blog.title}}'
+          />
+        </div>
+        <div class='blog-content'>
+          <label for='blog-content'>Content</label>
+          <textarea
+            class='entry-field'
+            id='blog-content'
+            name='blog-content'
+          >{{blog.description}}</textarea>
+        </div>
+        <button type='submit'>Update Blog-Post</button>
+        <button type='button' class='delete-blog-button'>Delete Blog-Post</Blog-Post></button>
+      </form>
+    </section>
+  </div>
+</article>
+<script src='/js/editBlog.js'></script>
+<script src='/js/deleteBlog.js'></script>

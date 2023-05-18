@@ -1,0 +1,38 @@
+<section class='new-blog-section'>
+  <a href='/new'>
+    <button type='submit' class='btn' id='add-new-blog'>+ Add New Blog</button>
+  </a>
+</section>
+{{#if blogteches.length}}
+  <section>
+    <h2>Dashboard</h2>
+    <ul class='blog-list'>
+      {{#each blogteches as |blog|}}
+        <li>
+          <article class='post'>
+            <div class='whole-blog'>
+              <div class='info-section'>
+                <div class='blog-name'>
+                  <a href='/blog/{{blog.id}}' class='links'>{{blog.title}}</a>
+                </div>
+                {{#if blog}}
+                  <div class='created-by'>
+                    <p id='comment-subtitle'>
+                      Posted on:
+                      <b>{{formatDate blog.date_created}}</b>
+                    </p>
+                  </div>
+                {{/if}}
+              </div>
+              <div class='content-section'>
+                <p>{{blog.description}}</p>
+              </div>
+            </div>
+          </article>
+          <br />
+        </li>
+      {{/each}}
+    </ul>
+  </section>
+{{/if}}
+<script src='/js/createBlog.js'></script>

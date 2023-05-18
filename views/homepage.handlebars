@@ -1,0 +1,27 @@
+<ul class='blog-list'>
+  {{#each blogs as |blog|}}
+    <li>
+      <article class='blog'>
+        <section class='entire-blog'>
+          <div class='info'>
+            <section class='blog-name'>
+              <a href='/blog/{{blog.id}}' class='links'>{{blog.title}}</a>
+            </section>
+            <section class='created-by'>
+              <p id='comment-subtitle'>
+                Posted by:
+                <b>{{blog.usertech.username}} </b>
+                on
+                <b>{{formatDate blog.date_created}}</b>
+              </p>
+            </section>
+          </div>
+          <section class='content-div'>
+            <p>{{blog.description}}</p>
+          </section>
+        </section>
+      </article>
+    </li>
+  {{/each}}
+  <br />
+</ul>

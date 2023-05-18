@@ -1,0 +1,26 @@
+<a href="/dashboard" class="go-back"> &larr; Return To Dashboard</a>
+<br>
+<br>
+{{> blog-info blog}}
+<a href="/edit/{{blog.id}}"> 
+    <button>
+        Edit Blog
+    </button> 
+</a>
+<br>
+{{#if loggedIn}}
+<form class="comment-form">
+    <input type="hidden" name="blog-id" value="{{blog.id}}">
+    <div>
+        <textarea name="comment-body"></textarea>
+    </div>
+
+    <div>
+        <button type="submit">Add Comment</button>
+    </div>
+</form>
+{{/if}}
+{{> comments blog.commentteches}}
+{{#if loggedIn}}
+<script src="/js/comments.js"></script>
+{{/if}}

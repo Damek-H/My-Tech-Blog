@@ -1,0 +1,147 @@
+:root {
+  --color-primary: #3c84a5;
+  --color-secondary: #e58a4f;
+  --color-tertiary: #d02f5e;
+  --color-primary-darker: #346d8e;
+  --color-secondary-darker: #c57a41;
+  --color-tertiary-darker: #b71e4c;
+  --color-primary-opacity: #3c84a54d;
+  --color-secondary-opacity: #e58a4f47;
+  --color-tertiary-opacity: #d02f5e2d;
+  --gradient-primary: linear-gradient(to top left, #1d4469, #7aed16);
+  --gradient-secondary: linear-gradient(to top left, #e58a4f, #eed25f);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  background-color: #f3f3f3;
+  font-weight: 300;
+  color: var(--color-primary-darker);
+  margin: 25px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--color-primary-darker);
+}
+
+main,
+.site-name {
+  background-color: azure;
+}
+
+.hero {
+  background: var(--gradient-primary);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 15px;
+  font-size: 1.8rem;
+}
+
+a,
+.button-no-style,
+#comment-subtitle {
+  color: #213807;
+  font-size: 1.5rem;
+}
+
+a:hover,
+.button-no-style:hover {
+  opacity: 0.8;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.1s;
+}
+
+button {
+  background-color: var(--color-primary-darker);
+  border: 0;
+  border-radius: 30px;
+  color: var(--color-secondary-darker);
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 20px;
+  transition: background-color 0.1s;
+  padding: 2%;
+}
+
+button:hover {
+  background-color: var(--color-tertiary-darker);
+  opacity: 0.7;
+}
+
+.blog-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.go-back {
+  color: #2c2307;
+}
+
+input,
+textarea {
+  padding: 0.5%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid #3486eb;
+}
+
+textarea {
+  min-width: 50%;
+  min-height: 100px;
+}
+
+form > div {
+  margin-bottom: 2%;
+}
+
+form label {
+  display: block;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-section {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-row,
+.info-section,
+.form-heading {
+  background-color: #868f6d;
+}
